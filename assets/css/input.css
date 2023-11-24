@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+.container-progress {
+  @apply;
+} */
+:root {
+  --before-width: 100%;
+}
+
+body {
+  @apply flex items-center justify-center h-screen bg-slate-100;
+  background: #c33764; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1d2671,
+    #c33764
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.wrapper {
+  @apply w-[700px] h-[350px] bg-white flex flex-col items-center justify-center rounded-3xl;
+}
+.wrapper h2 {
+  @apply text-lg font-bold text-[#3c3c3c] mb-5;
+}
+.container-progress {
+  @apply flex relative justify-between items-center bg-transparent  w-[600px];
+}
+.progress {
+  @apply h-2 absolute top-[50%] w-[98%] bg-zinc-300 z-[1];
+}
+.progress-main {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 8px;
+  border-radius: 50%;
+  width: 0%;
+  z-index: 2;
+  background-color: #4747d7;
+}
+.circle {
+  @apply w-12 h-12 rounded-full bg-zinc-200 flex items-center justify-center border-4 z-20 border-zinc-300;
+}
+.circle.active {
+  @apply bg-zinc-200 flex items-center justify-center border-4 border-[#4747d7];
+}
+.btn {
+  @apply p-5 pt-2 pb-2 bg-blue-800 rounded-lg border-2 border-blue-700  text-white;
+}
+.btn:focus {
+  @apply p-5 pt-2 pb-2 bg-blue-600 rounded-lg border-2 border-blue-700  text-white;
+}
+.btn:disabled {
+  @apply bg-zinc-200 cursor-not-allowed text-[#555] rounded-lg border-2 border-zinc-300;
+}
+.btn:active {
+  @apply p-5 pt-2 pb-2 bg-blue-900 rounded-lg border-2 border-blue-800  text-white;
+}
